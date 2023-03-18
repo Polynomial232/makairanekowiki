@@ -79,6 +79,19 @@ body {
     font-family: 'Kanit', sans-serif;
 }
 
+.navbar .center-side a{
+    background-color: transparent;
+    padding: 0;
+}
+
+.navbar .center-side a:hover{
+    transform: translate(0,0);
+}
+
+.navbar .center-side a i{
+    display: none;
+}
+
 .container hr{
     border-color: var(--soft-purple);
 }
@@ -205,11 +218,45 @@ footer{
 
 @media only screen and (max-width: 768px) {
     .navbar {
-        display: none;
+        bottom: 0;
+        padding: 0.9em 0;
+        border-top: 2px solid var(--soft-purple);
     }
 
     .container{
         width: 90%;
+        padding: 0;
+    }
+
+    .navbar .container{
+        border: none;
+    }
+
+    .navbar .left-side{
+        display: none;
+    }
+
+    .navbar .center-side {
+        gap: 3em;
+    }
+
+    .navbar .center-side a i{
+        display: block;
+        font-size: 1.2em;
+    }
+
+    .navbar .center-side a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--soft-purple);
+        color: white;
+        width: 45px;
+        height: 45px;
+    }
+
+    .navbar .center-side a span{
+        display: none;
     }
 
     main .container{
@@ -240,7 +287,7 @@ footer{
 
     main .left-side p{
         width: 100%;
-        font-size: 1.3em;
+        font-size: 1.2em;
     }
 
     main .left-side #section-1 {
