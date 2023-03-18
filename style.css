@@ -20,17 +20,20 @@ a {
     text-decoration: none;
     color: black;
     background-color: #FCFD95;
-    padding: 10px 16px;
+    padding: 13px 16px;
     font-family: 'Jua', sans-serif;
     border-radius: 4px;
     letter-spacing: 0.7px;
+    transition: .2s ease-in-out;
+}
+
+a:hover{
+    transform: translate(5px, -5px);
 }
 
 body {
     padding: auto;
     margin: auto;
-    display: flex;
-    justify-content: center;
     height: 200vh;
 }
 
@@ -45,6 +48,7 @@ body {
     width: 100%;
     position: fixed;
     background-color: white;
+    z-index: 50;
 }
 
 .navbar .content-nav{
@@ -90,6 +94,7 @@ main .container{
 
 main .right-side {
     position: fixed;
+    width: 28%;
     height: 100vh;
     right: 10%;
     background-color: var(--yellow);
@@ -170,16 +175,6 @@ main .left-side #section-1 .content {
     justify-content: space-between;
 }
 
-main .left-side #section-1 .community a{
-    text-decoration: none;
-    color: black;
-    background-color: #FCFD95;
-    padding: 5px 16px;
-    font-family: 'Kanit', sans-serif;
-    border-radius: 4px;
-    letter-spacing: 0.6px;
-}
-
 main .left-side #section-2 {
     margin: 5em 0;
 }
@@ -191,7 +186,84 @@ main .left-side #section-2 p {
     font-size: 1.3em;
 }
 
+.parent-read-more{
+    margin-top: 2em;
+    display: flex;
+}
+
 main .left-side #section-2 a.read-more{
     background-color: var(--soft-purple);
     color: white;
+}
+
+footer{
+    padding: 5px;
+    text-align: center;
+    background-color: var(--heading-color);
+    color: white;
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar {
+        display: none;
+    }
+
+    .container{
+        width: 90%;
+    }
+
+    main .container{
+        flex-direction: column;
+    }
+
+    main .right-side {
+        position: relative;
+        order: -1;
+        width: 100%;
+        right: 0;
+        max-height: 15em;
+    }
+
+    main .left-side {
+        padding: 1em 0;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    main .left-side h2{
+        font-size: 1.6em;
+    }
+
+    main .left-side h1{
+        font-size: 3em;
+    }
+
+    main .left-side p{
+        width: 100%;
+        font-size: 1.3em;
+    }
+
+    main .left-side #section-1 {
+        width: 100%;
+    }
+
+    main .left-side #section-1 .buttons{
+        width: 100%;
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    main .left-side #section-1 .buttons a.support-me{
+        order: -1;
+    }
+
+    main .left-side #section-1 .content{
+        width: 100%;
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .parent-read-more{
+        justify-content: center;
+    }
 }

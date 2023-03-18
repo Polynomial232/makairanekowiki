@@ -45,7 +45,7 @@
                     <div class="content">
                         <div class="live-content">
                             <h1>30</h1>
-                            <h2>Live</h2>
+                            <h2>Live Video</h2>
                         </div>
                         <div class="live-content">
                             <h1>30</h1>
@@ -53,16 +53,17 @@
                         </div>
                         <div class="live-content">
                             <h1>30</h1>
-                            <h2>Short</h2>
+                            <h2>Short Video</h2>
                         </div>
                     </div>
                 </div>
-
                 <div id="section-2">
-                    <h2>About Me</h2>
+                    <h1>About Me</h1>
                     <p>Namaku Makaira Neko, aku adalah kucing dari desa bernama “Arcsla”. Aku yang memilki kekuatan dari nyanyianku. Salah satu kekuatan dari nyanyianku adalah untuk menyembuhkan luka.</p>
                     <p>Oleh karena itu aku akan terus bernyanyi untuk menyembuhkan semua manusia, hewan dan tumbuhan. agar mereka semua sembuh dari luka dari luar tubuhnya dan luka dari dalam tubuhnya.</p>
-                    <a href="https://www.mediafire.com/file/t5h1snq6uogbeh8/Backstory+Makaira+Neko.pdf/file" target="_blank" class="read-more">Read More</a>
+                    <div class="parent-read-more">
+                        <a href="https://www.mediafire.com/file/t5h1snq6uogbeh8/Backstory+Makaira+Neko.pdf/file" target="_blank" class="read-more">Read More</a>
+                    </div>
                 </div>
             </div>
             <div class="right-side">
@@ -70,5 +71,18 @@
             </div>
         </div>
     </main>
+
+    <footer>
+        &copy <span id="time"></span> Makaira Neko
+    </footer>
+
+
+    <script>
+        let time = document.getElementById('time')
+
+        getTime = new Date()
+        
+        time.textContent = getTime.getFullYear()
+    </script>
 </body>
 </html>
