@@ -8,6 +8,22 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="images/logo.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preload" as="image" href="/images/fill-main.png">
+    <link rel="preload" as="image" href="/images/logo.png">
+    <link rel="preload" as="image" href="/images/main.png">
+    <link rel="preload" as="image" href="/images/prof-1.jpg">
+    <link rel="preload" as="image" href="/images/prof-2.jpg">
+    <link rel="preload" as="image" href="/images/prof-3.jpg">
+    <link rel="preload" as="image" href="/images/prof-4.jpg">
+    <link rel="preload" as="image" href="/images/prof-5.jpg">
+
+    <meta charset="UTF-8">
+    <meta name="description" content="Hello! Your cutie cat, Makaira Neko. A cat girl from an unknown world that have magical powers.">
+    <meta name="keywords" content="Vtuber, Anime, Neko, Cat">
+    <meta name="author" content="Makaira Neko">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
 <body>
     <nav class="navbar">
@@ -84,6 +100,10 @@
         Copyright &copy <span id="time"></span> - Makaira Neko
     </footer>
 
+    
+    <div id="preload">
+        <img src="images/logo.png" alt="">
+    </div>
 
     <script>
         let time = document.getElementById('time')
@@ -129,6 +149,12 @@
                 imgRightSide.style.transition = `.2s ease-in-out`
             }
         });
+
+        let loader = document.getElementById("preload")
+
+        window.addEventListener("load", () => {
+            loader.style.display = "none"
+        })
     </script>
 </body>
 </html>
